@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR] 
+RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR] 
+RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR] 
+RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR] 
+RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2}) 
+ErrorDocument 404 http://localhost/shop-native/pages/404
