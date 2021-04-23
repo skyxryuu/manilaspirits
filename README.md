@@ -1,2 +1,2 @@
 # manilaspirits
-A e-commerce based on PHP, Javascript, and Boostrap
+An e-commerce based on PHP, Javascript, and Boostrap.
